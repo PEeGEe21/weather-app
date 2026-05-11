@@ -1,10 +1,10 @@
-# 🌤️ Weather App (Project 03)
+# Weather App (Project 03)
 
 A responsive, real-time weather application built with React and TypeScript. The app fetches live weather data from a public API and displays current conditions including temperature, humidity, wind speed, and more — with a dedicated default view for **Lagos, Nigeria**.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Objectives](#objectives)
@@ -37,12 +37,12 @@ The Weather App is a web-based application that provides users with real-time we
 
 ## Features
 
-- 🌡️ Real-time weather data (temperature, humidity, wind speed, conditions)
-- 📍 Default Lagos, Nigeria weather view
-- ⏳ Loading state with visual feedback
-- ❌ Error state handling for failed API calls
-- 📱 Fully responsive UI
-- 🔍 Search for weather by city name
+- Real-time weather data (temperature, humidity, wind speed, conditions)
+- Default Lagos, Nigeria weather view
+- Loading state with visual feedback
+- Error state handling for failed API calls
+- Fully responsive UI
+- Search for weather by city name
 
 ---
 
@@ -298,15 +298,5 @@ The project follows a component-based architecture in React TypeScript:
 - **Loading, success, and error states** are managed explicitly to guide user experience
 - **TypeScript interfaces** enforce type safety across components and API responses
 - **Tailwind CSS** handles responsive layout without custom stylesheets
-
----
-
-## Expected Outcomes
-
-- A fully functional, deployed weather application
-- Improved understanding of REST API integration in React
-- Hands-on experience with TypeScript generics and interfaces
-- Practical usage of `useEffect` for side effects and data fetching
-- A demo-ready app with Lagos as the featured default city
 
 ---
