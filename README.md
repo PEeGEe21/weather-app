@@ -122,10 +122,37 @@ interface WeatherData {
   icon: string;
 }
 
-interface AppState {
+interface WeatherState {
   data: WeatherData | null;
   loading: boolean;
   error: string | null;
+}
+
+interface OpenWeatherResponse {
+  name: string;
+  sys: {
+    country: string;
+  };
+  main: {
+    temp: number;
+    feels_like: number;
+    humidity: number;
+    pressure: number;
+  };
+  wind: {
+    speed: number;
+  };
+  visibility: number;
+  weather: Array<{
+    main: string;
+    description: string;
+    icon: string;
+  }>;
+}
+
+interface OpenWeatherErrorResponse {
+  cod: number | string;
+  message: string;
 }
 ```
 
