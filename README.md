@@ -299,4 +299,9 @@ The project follows a component-based architecture in React TypeScript:
 - **TypeScript interfaces** enforce type safety across components and API responses
 - **Tailwind CSS** handles responsive layout without custom stylesheets
 
+## Live Preview
+```
+For a live preview - https://weather-app-two-ruddy-47.vercel.app/
+
+```
 ---
