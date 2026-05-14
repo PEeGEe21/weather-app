@@ -1,7 +1,3 @@
-# Progressive Web App (PWA) Guide
-
-This project has been upgraded into a Progressive Web App. This README is written in a presentation-friendly format, so sections can be copied directly into slides.
-
 ## Slide 1: Title
 
 **Turning a React Weather App into a Progressive Web App**
