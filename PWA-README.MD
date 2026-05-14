@@ -1,11 +1,11 @@
-## Slide 1: Title
+##  1: Title
 
 **Turning a React Weather App into a Progressive Web App**
 
 Subtitle:
 From a standard web app to an installable, offline-aware experience
 
-## Slide 2: What Is a PWA?
+##  2: What Is a PWA?
 
 A Progressive Web App is a web application that behaves more like a native app while still running in the browser.
 
@@ -17,7 +17,7 @@ A PWA can:
 - Open in its own window instead of a browser tab
 - Offer a more resilient user experience
 
-## Slide 3: Core Idea
+##  3: Core Idea
 
 A PWA combines three things:
 
@@ -27,7 +27,7 @@ A PWA combines three things:
 
 If those pieces are implemented well, users get a smoother, more dependable experience without needing an app store.
 
-## Slide 4: Main Features of a PWA
+##  4: Main Features of a PWA
 
 - Installable: users can add it to their home screen or desktop
 - Responsive: works across phones, tablets, and laptops
@@ -35,7 +35,7 @@ If those pieces are implemented well, users get a smoother, more dependable expe
 - Secure: served over HTTPS in production
 - App-like: launches in a standalone window
 
-## Slide 5: Why PWAs Matter
+##  5: Why PWAs Matter
 
 - Lower friction than native apps
 - One codebase for multiple platforms
@@ -43,7 +43,7 @@ If those pieces are implemented well, users get a smoother, more dependable expe
 - Better performance on repeat visits
 - Stronger usability in low-bandwidth environments
 
-## Slide 6: PWA Building Blocks
+##  6: PWA Building Blocks
 
 ### 1. Manifest
 
@@ -68,7 +68,7 @@ The service worker runs in the background and helps with:
 - Handling network strategies
 - Improving repeat-visit performance
 
-## Slide 7: What We Added to This React App
+##  7: What We Added to This React App
 
 This weather app now includes:
 
@@ -80,7 +80,7 @@ This weather app now includes:
 - Offline status messaging
 - Local storage backup for the last successful weather result
 
-## Slide 8: How the Upgrade Works
+##  8: How the Upgrade Works
 
 ### App shell caching
 
@@ -94,7 +94,7 @@ If the user revisits the app without internet, the browser can still load the ma
 
 The app keeps the last successful weather result in local storage so users still see useful data after a failed request.
 
-## Slide 9: How to Turn a React App into a PWA
+##  9: How to Turn a React App into a PWA
 
 1. Start with a working React app.
 2. Create a web app manifest.
@@ -107,7 +107,7 @@ The app keeps the last successful weather result in local storage so users still
 9. Test installability and offline mode.
 10. Deploy over HTTPS.
 
-## Slide 10: Step 1 - Create the Manifest
+##  10: Step 1 - Create the Manifest
 
 Example:
 
@@ -128,7 +128,7 @@ Why it matters:
 - It controls the launch experience
 - It tells the browser which icons to use
 
-## Slide 11: Step 2 - Add a Service Worker
+##  11: Step 2 - Add a Service Worker
 
 The service worker powers offline behavior and caching.
 
@@ -140,7 +140,7 @@ Typical strategies:
 
 For a weather app, that balance matters because fresh weather is important, but blank screens are frustrating.
 
-## Slide 12: Step 3 - Register the Service Worker
+##  12: Step 3 - Register the Service Worker
 
 In React with Vite, registration usually happens in `src/main.tsx`.
 
@@ -154,7 +154,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-## Slide 13: Step 4 - Update the HTML Head
+##  13: Step 4 - Update the HTML Head
 
 Important additions in `index.html`:
 
@@ -165,7 +165,7 @@ Important additions in `index.html`:
 
 These help the browser recognize the app as installable and present it correctly when launched from a device.
 
-## Slide 14: Step 5 - Make the UI Offline-Aware
+##  14: Step 5 - Make the UI Offline-Aware
 
 Technical support alone is not enough. Users should understand what is happening.
 
@@ -176,7 +176,7 @@ Useful UI additions include:
 - Clear offline messaging
 - Showing the last known good data instead of a blank screen
 
-## Slide 15: React-Specific Notes
+##  15: React-Specific Notes
 
 For a React app, the usual files involved are:
 
@@ -185,7 +185,7 @@ For a React app, the usual files involved are:
 - `public/` for the manifest, icons, and service worker
 - Hooks and state logic for offline fallbacks
 
-## Slide 16: Challenges to Think About
+##  16: Challenges to Think About
 
 - Live API data can become stale
 - Browser install prompts do not behave the same everywhere
@@ -193,7 +193,7 @@ For a React app, the usual files involved are:
 - Service worker caches need versioning
 - First load offline is different from repeat visit offline
 
-## Slide 17: PWA Checklist
+##  17: PWA Checklist
 
 - Manifest added
 - Icons added
@@ -204,7 +204,7 @@ For a React app, the usual files involved are:
 - Install prompt tested
 - Mobile and desktop behavior tested
 
-## Slide 18: What Changed in This Project
+##  18: What Changed in This Project
 
 Files added or updated for the upgrade:
 
@@ -220,7 +220,7 @@ Files added or updated for the upgrade:
 - `src/main.tsx`
 - `index.html`
 
-## Slide 19: Key Takeaway
+##  19: Key Takeaway
 
 A PWA is not a separate kind of app. It is a standard web app that has been enhanced to be:
 
@@ -229,13 +229,13 @@ A PWA is not a separate kind of app. It is a standard web app that has been enha
 - More resilient on unstable networks
 - More app-like for users
 
-## Slide 20: Service Worker Necessicity
+##  20: Service Worker Necessicity
 A manifest alone makes the app look installable. A service worker is what gives it the “progressive” behavior like offline support, caching, faster repeat visits, and network fallback. Without one, you mostly just have a regular web app with install metadata.
 
 - If you only want “Add to Home Screen” branding, a manifest may be enough in some browsers.
 - If you want offline access, cached assets, resilient loading, or real PWA behavior, a service worker is necessary.
 
-## Slide 20: Closing
+##  20: Closing
 
 Turning a React app into a PWA is a practical way to improve reach, reliability, and user experience without building separate native apps.
 
