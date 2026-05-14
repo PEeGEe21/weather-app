@@ -3,9 +3,13 @@ import Header from "./components/Header";
 import LoadingSpinner from "./components/LoadingSpinner";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
+// import { useOnlineStatus } from "./hooks/v2/useOnlineStatus";
+// import { usePwaInstall } from "./hooks/v2/usePwaInstall";
 import { useWeather } from "./hooks/useWeather";
 
 function App() {
+  // const isOnline = useOnlineStatus();
+  // const { canInstall, isInstalled, promptInstall } = usePwaInstall();
   const {
     weather,
     loading,
@@ -28,10 +32,17 @@ function App() {
       />
 
       <section className="relative z-10 mx-auto w-full max-w-5xl rounded-[32px] border border-slate-900/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(242,247,255,0.92))] p-5 shadow-[0_24px_80px_rgba(11,37,69,0.12)] backdrop-blur-[14px] sm:p-8">
-        <Header currentCity={currentCity} />
+        <Header
+          currentCity={currentCity}
+          // isOnline={isOnline}
+          // canInstall={canInstall}
+          // isInstalled={isInstalled}
+          // onInstall={promptInstall}
+        />
         <SearchBar onSearch={searchWeather} loading={loading} />
 
         <div className="grid gap-5">
+
           {loading ? <LoadingSpinner city={currentCity} /> : null}
 
           {!loading && error ? (
@@ -46,7 +57,7 @@ function App() {
           {!loading && weather ? (
             <WeatherCard
               weather={weather}
-              variant={hasSearched ? "search" : "default"}
+              variant={hasSearched || weather.city !== "Lagos" ? "search" : "default"}
             />
           ) : null}
         </div>
